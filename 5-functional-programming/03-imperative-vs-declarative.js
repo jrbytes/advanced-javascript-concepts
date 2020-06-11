@@ -5,4 +5,5 @@ for (let i = 0; i < 100; i++) {
   console.log(i)
 }
 
+// Mais declarativo que o exemplo acima
 [1, 2, 3].forEach(item => console.log(item))
