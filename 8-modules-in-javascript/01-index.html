@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Helloooooo</h1>
+
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
+  <script src="./01-module-pattern.js"></script>
+  <script>
+    var globalSecret = '1234'
+    var fight = 'hehe'
+  </script>
+  <script>
+    var script2 = (function($, globalSecret) {
+      $('h1').click(function() {
+        $('h1').hide()
+      })
+      $ = undefined
+      globalSecret = '0'
+    })(jQuery, globalSecret)
+  </script>
+</body>
+</html>
